@@ -103,9 +103,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Configuration base de données pour Railway
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL', default='sqlite:///db.sqlite3'),
+        default=config('DATABASE_URL'),
         conn_max_age=600,
-        ssl_require=True
+        ssl_require=True  # très important sur Render
     )
 }
 

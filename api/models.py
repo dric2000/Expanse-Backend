@@ -15,7 +15,7 @@ class Transaction(models.Model):
 
   
   def __str__(self):
-    return f"{self.text}" ({self.amount})
+    return f"{self.text} ({self.amount})"
 
 
 # Modèle pour les utilisateurs
